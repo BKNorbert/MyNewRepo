@@ -33,4 +33,7 @@ if (isAwesome) {
 | Cell A       | Cell B        |
 
 :+1:  :-1:
-:smile: :disappointed:  :rage:  :tada:  :Tree:  :coctail:
+
+:smile:   :disappointed:  :rage:
+
+:tada:  :tree:  :coctail:
