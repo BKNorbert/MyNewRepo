@@ -1,6 +1,6 @@
 # my first repository
 
-It's very easy to make some words **bold** and other words _italic_ with Markdown. You can even [Link to
+It's very easy to make some words **bold** and other words _italic_ or ~~striked~~ with Markdown. You can even [Link to
 Google!](http://google.com)
 
 Sometimes you want numbered lists:
@@ -32,5 +32,6 @@ if (isAwesome) {
 | Cell 1       | Cell 2        |
 | Cell A       | Cell B        |
 
-:+1:  :-1:
-:smile: :disappointed:  :rage:  :tada:  :Tree:  :coctail:
+:+1: :-1:
+:smile: :disappointed: :rage:
+:tada: :tree: :coctail:
