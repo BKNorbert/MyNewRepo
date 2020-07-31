@@ -63,11 +63,7 @@ Quote break.
 
 ---
 
-:tada: :tree: :coctail:
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=M6dXXPhk-3I
-" target="_blank"><img src="http://img.youtube.com/vi/M6dXXPhk-3I/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+:tada: :palm_tree: :hamburger:
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/M6dXXPhk-3I/0.jpg)](https://www.youtube.com/watch?v=M6dXXPhk-3I)
 
