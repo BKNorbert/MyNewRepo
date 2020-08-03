@@ -1,3 +1,30 @@
+Web Workers
+===========
+
+You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big
+chunks of code.
+
+In your main script:
+
+```
+addEventListener('load', () => {
+  const code = document.querySelector('#code');
+  const worker = new Worker('worker.js');
+  worker.onmessage = (event) => { code.innerHTML = event.data; }
+  worker.postMessage(code.textContent);
+});
+```
+
+In worker.js:
+
+```
+onmessage = (event) => {
+  importScripts('<path>/highlight.min.js');
+  const result = self.hljs.highlightAuto(event.data);
+  postMessage(result.value);
+};
+```
+
 # my first repository
 
 It's very easy to make some words **bold** and other words _italic_ or ~~striked~~ with Markdown. You can even [Link to Google!](http://google.com)
@@ -15,21 +42,24 @@ Sometimes you want bullet points:
 
 If you want to embed images, this is how you do it:
 
-![Image of professorcat](https://mysite.github.com/images/cat.png)
+![Image of professorcat](https://arajczy.duckdns.org/images/cat.png)
 
 ```javascript
 if (isAwesome) {
   return true;
 }
 ```
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
 
 - [x] This is a complete item
 - [ ] This is an incomplete item
-
-| First Header | Second Header |
-| ------------ | ------------- |
-| Cell 1       | Cell 2        |
-| Cell A       | Cell B        |
 
 Colons can be used to align columns.
 
@@ -47,6 +77,10 @@ raw Markdown line up prettily. You can also use inline Markdown.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
+
+Here is an inline note.^[Inlines notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.]
 
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
