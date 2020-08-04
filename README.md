@@ -1,25 +1,26 @@
-Web Workers
-===========
+# Web Workers
 
 You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big
 chunks of code.
 
 In your main script:
 
-```
-addEventListener('load', () => {
-  const code = document.querySelector('#code');
-  const worker = new Worker('worker.js');
-  worker.onmessage = (event) => { code.innerHTML = event.data; }
+```javascript
+addEventListener("load", () => {
+  const code = document.querySelector("#code");
+  const worker = new Worker("worker.js");
+  worker.onmessage = event => {
+    code.innerHTML = event.data;
+  };
   worker.postMessage(code.textContent);
 });
 ```
 
 In worker.js:
 
-```
-onmessage = (event) => {
-  importScripts('<path>/highlight.min.js');
+```javascript
+onmessage = event => {
+  importScripts("<path>/highlight.min.js");
   const result = self.hljs.highlightAuto(event.data);
   postMessage(result.value);
 };
@@ -49,13 +50,14 @@ if (isAwesome) {
   return true;
 }
 ```
+
 Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
-
 [^longnote]: Here's one with multiple blocks.
 
-    Subsequent paragraphs are indented to show that they
+  Subsequent paragraphs are indented to show that they
+
 belong to the previous footnote.
 
 - [x] This is a complete item
