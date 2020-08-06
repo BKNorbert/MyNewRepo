@@ -1,6 +1,6 @@
 # Web Workers
 # miből lesz a cserebogár
-#  Cli ből küldött pull-request
+#  Cli ből küldött pull-request 
 
 You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big
 chunks of code.
