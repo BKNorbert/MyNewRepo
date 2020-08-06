@@ -1,7 +1,8 @@
 # Web Workers
 # miből lesz a cserebogár
 #  Cli ből küldött pull-request 
-# vscode-ból
+# Teszt
+
 
 You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big
 chunks of code.
