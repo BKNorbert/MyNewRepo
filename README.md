@@ -1,4 +1,5 @@
 # Web Workers
+# miből lesz a cserebogár
 
 You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big
 chunks of code.
